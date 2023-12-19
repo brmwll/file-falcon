@@ -26,8 +26,9 @@ for filename in os.listdir(downloads_dir):
         if not os.path.exists(directory_path):
             os.makedirs(directory_path)
 
-        # Move the file to the directory
-        shutil.move(os.path.join(downloads_dir, filename), directory_path)
+        # Move the file to the directory if a file with the same name doesn't already exist there
+        if not os.path.exists(os.path.join(directory_path, filename)):
+            shutil.move(os.path.join(downloads_dir, filename), directory_path)
 
 # Send a desktop notification when the script is done
 Notifier.notify('Your files have been organized.', title='Organizing Complete')
