@@ -9,12 +9,12 @@ File Falcon requires Python 3 and the dependencies listed in the `requirements.t
 You can install the required Python packages using pip:
 
 ```bash
-pip install -r requirements.txt
+pip3 install -r requirements.txt
 ```
 
 ## Usage
 
-1. Create a JSON configuration file named `config.json` in the same directory as the script. The configuration file should map directory names to lists of file extensions. Here's an example:
+1. Edit the JSON configuration file named `config.json` in the same directory as the script or create your own. The configuration file maps directory names to lists of file extensions. Here's an example:
 
 ```json
 {
@@ -27,7 +27,7 @@ pip install -r requirements.txt
 1. Unleash the Falcon:
 
 ```bash
-python3 mian.py
+python3 main.py
 ```
 
 The File Falcon will organize the files in your Downloads directory according to the configuration file and send a desktop notification when it's done.
